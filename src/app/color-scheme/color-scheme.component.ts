@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-color-scheme',
   templateUrl: './color-scheme.component.html',
-  styleUrls: ['./color-scheme.component.css']
+  styleUrls: ['./color-scheme.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ColorSchemeComponent implements OnInit {
 
