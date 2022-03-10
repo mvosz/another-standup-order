@@ -9,6 +9,7 @@ import { ListComponent } from './list/list.component';
 import { CancelAllComponent } from './cancel-all/cancel-all.component';
 import { RecentlyUsedComponent } from './recently-used/recently-used.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ColorSchemeComponent } from './color-scheme/color-scheme.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AddComponent,
     ListComponent,
     CancelAllComponent,
-    RecentlyUsedComponent
+    RecentlyUsedComponent,
+    ColorSchemeComponent
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],

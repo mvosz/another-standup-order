@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  height: calc(100vh - 16px);
+  height: 100vh;
 }
 
 .flex-container {

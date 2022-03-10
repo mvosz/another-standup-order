@@ -1,0 +1,17 @@
+.toggle-color-scheme {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #ddd;
+    transition: color 200ms ease-out;
+    padding: 20px;
+    margin: 0;
+}
+
+.toggle-color-scheme:hover {
+    color: #111;
+}

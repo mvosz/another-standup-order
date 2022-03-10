@@ -6,26 +6,26 @@
   color: #dfdfdf;
 }
 
-.person {
+.recently .person {
   margin-bottom: 20px;
   color: white;
   background-color: #dfdfdf;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
-  transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
-.person:hover {
+.recently .person:hover {
   background-color: #a9a9a9;
   cursor: pointer;
 }
 
-.label {
+.recently .label {
   margin-bottom: 5px;
 }
 
-.name {
+.recently .name {
   font-family: sans-serif;
   font-size: 16px;
   padding: 20px;
@@ -33,7 +33,7 @@
   user-select: none;
 }
 
-.close {
+.recently .close {
   width: 20px;
   height: 20px;
   padding: 20px;
@@ -42,17 +42,17 @@
   transition: opacity 300ms ease-in;
 }
 
-.person.focus .close {
+.recently .person.focus .close {
   pointer-events: none;
   opacity: 0;
 }
 
-.person:not(.focus) .close:hover {
+.recently .person:not(.focus) .close:hover {
   opacity: 1;
   cursor: pointer;
 }
-.close:before,
-.close:after {
+.recently .close:before,
+.recently .close:after {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -61,9 +61,17 @@
   width: 2px;
   background-color: rgb(255, 255, 255);
 }
-.close:before {
+.recently .close:before {
   transform: translateY(-50%) rotate(45deg);
 }
-.close:after {
+.recently .close:after {
   transform: translateY(-50%) rotate(-45deg);
+}
+
+.dark .recently .person {
+  background-color: #3f3f3f;
+}
+
+.dark .recently .person:hover {
+  background-color: #4f4f4f;
 }

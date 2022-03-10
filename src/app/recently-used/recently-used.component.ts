@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-recently-used',
   templateUrl: './recently-used.component.html',
-  styleUrls: ['./recently-used.component.css']
+  styleUrls: ['./recently-used.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class RecentlyUsedComponent {
   @Input() names: string[] = [];
