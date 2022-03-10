@@ -13,5 +13,23 @@
 }
 
 .toggle-color-scheme:hover {
-    color: #111;
+    color: #333;
+}
+
+.dark .toggle-color-scheme {
+    color: #666;
+}
+
+.dark .toggle-color-scheme:hover {
+    color: #ddd;
+}
+
+@media only screen and (max-width: 600px) {
+    .toggle-color-scheme {
+        position: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
