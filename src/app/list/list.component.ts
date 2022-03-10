@@ -52,7 +52,7 @@ export class ListComponent {
     });
     (event.target as Element).classList.toggle('focus');
     if ((event.target as Element).classList.contains('focus')) {
-      this.focusPerson.emit(event.target.children[0].innerHTML);
+      this.focusPerson.emit((event.target as Element).children[0].innerHTML);
     } else {
       this.focusPerson.emit(null);
     }
