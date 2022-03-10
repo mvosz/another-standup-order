@@ -5,6 +5,5 @@ A tool to support a team at Dailies. Simply enter the names of the participants,
 Try it directly on stackblitz: https://another-standup-order.stackblitz.io/?names=Jane,Doe
 
 to start it locally:
-
-first install all packages with 'npm install' or 'yarn'
-next step is to build and start the app with 'ng serve' or 'yarn start'
+1. first install all packages with 'npm install' or 'yarn'
+2. next step is to build and start the app with 'ng serve' or 'yarn start'
