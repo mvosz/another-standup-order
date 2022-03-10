@@ -1,0 +1,7 @@
+<div class="recently">
+  <div class="label" *ngIf="names.length > 0">recently used: </div>
+  <div class="person unused" *ngFor="let name of names" (click)="onAddPerson(name)">
+    <div class="name">{{ name }}</div>
+    <div class="close" (click)="resetName(name, $event)"></div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<form
+  class="add"
+  [formGroup]="form"
+  (submit)="onAdd(form.value.name)"
+>
+  <input
+    #nameInput
+    class="add-input"
+    type="text"
+    formControlName="name"
+    placeholder="Type Name here..."
+  />
+</form>

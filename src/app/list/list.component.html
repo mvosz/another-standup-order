@@ -1,0 +1,6 @@
+<div class="persons">
+  <div class="person" *ngFor="let name of names" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave($event)" (click)="setFocus($event)">
+    <div class="name">{{ name }}</div>
+    <div class="close" (click)="onClose(name)"></div>
+  </div>
+</div>

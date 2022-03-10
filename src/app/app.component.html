@@ -1,0 +1,21 @@
+<div class="grid">
+  <div class="flex">
+    <div class="flex-container">
+
+      <app-randomize (randomize)="onRandomize()"></app-randomize>
+
+      <app-add (addName)="onAdd($event, 'top')"></app-add>
+
+      <app-list [names]="listNames" (removePerson)="onCancel($event)" (focusPerson)="setFocusPerson($event)"></app-list>
+
+    </div>
+    <div class="flex-container">
+
+      <app-cancel-all (cancelAll)="onCancelAll()"></app-cancel-all>
+
+      <app-recently-used [names]="recentlyNames" (addPerson)="onAdd($event, 'bottom')"
+        (removePerson)="onRemove($event)"></app-recently-used>
+
+    </div>
+  </div>
+</div>

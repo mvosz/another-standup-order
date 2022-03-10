@@ -1,0 +1,16 @@
+.add {
+  display: flex;
+}
+
+.add-input {
+  padding: 20px 15px 20px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #dfdfdf;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}

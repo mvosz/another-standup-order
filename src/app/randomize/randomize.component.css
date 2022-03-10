@@ -1,0 +1,73 @@
+.randomize__button {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-size: 400% 400%;
+  color: white;
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  height: 80px;
+  width: 100%;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  transition: all 300ms ease-in-out;
+  position: relative;
+  filter: saturate(0.8);
+}
+
+.randomize__button:before,
+.randomize__button:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  height: 100%;
+  content: '';
+  z-index: -2;
+  background-size: 400% 400%;
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+}
+.randomize__button:before {
+  filter: blur(0);
+  transition: all 0.25s ease;
+  animation: pulse 10s infinite ease;
+}
+.randomize__button:after {
+  filter: blur(0.3px);
+}
+.randomize__button:hover::before {
+  filter: blur(7px);
+}
+.randomize__button:hover {
+  filter: saturate(1);
+}
+.randomize__icon svg {
+  height: 30px;
+  width: 30px;
+}
