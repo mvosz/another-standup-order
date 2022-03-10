@@ -1,1 +1,10 @@
 /* Add application styles & imports to this file! */
+body {
+    background-color: #fdfdfd;
+    transition: background-color 200ms ease-out;
+    margin: 0;
+}
+
+body.dark {
+    background-color: #333;
+}
