@@ -1,4 +1,5 @@
-<div class="recently">
+<div class="recently" [id]="'doneList'" cdkDropList #doneList="cdkDropList" [cdkDropListData]="names"
+     [cdkDropListConnectedTo]="'todoList'" (cdkDropListDropped)="drop($event)">
   <div class="label" *ngIf="names.length > 0">recently used: </div>
   <div class="person unused" *ngFor="let name of names" (click)="onAddPerson(name)">
     <div class="name">{{ name }}</div>

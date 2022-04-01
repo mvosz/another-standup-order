@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-recently-used',
@@ -18,5 +19,17 @@ export class RecentlyUsedComponent {
 
   onAddPerson(name: string): void {
     this.addPerson.emit(name);
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    console.log('drop', event);
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex);
+    }
   }
 }

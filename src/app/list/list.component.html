@@ -1,4 +1,5 @@
-<div class="persons">
+<div class="persons" [id]="'todoList'" cdkDropList #todoList="cdkDropList" [cdkDropListData]="names"
+     [cdkDropListConnectedTo]="'doneList'" (cdkDropListDropped)="drop($event)">
   <div class="person" *ngFor="let name of names" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave($event)" (click)="setFocus($event)">
     <div class="name">{{ name }}</div>
     <div class="close" (click)="onClose(name)"></div>

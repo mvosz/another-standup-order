@@ -4,9 +4,9 @@ import {
   EventEmitter,
   HostListener,
   Input,
-  OnInit,
   Output
 } from '@angular/core';
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-list',
@@ -98,5 +98,19 @@ export class ListComponent {
     persons = persons.filter(person => !person.classList.contains('unused'));
     persons.forEach(person => person.classList.remove('focus'));
     this.focusPerson.emit(null);
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    console.log('drop', event);
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
+    }
   }
 }
