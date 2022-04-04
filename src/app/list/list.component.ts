@@ -4,14 +4,15 @@ import {
   EventEmitter,
   HostListener,
   Input,
-  OnInit,
-  Output
+  Output, ViewEncapsulation
 } from '@angular/core';
+import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ListComponent {
   @Input() names: string[] = [];
@@ -98,5 +99,18 @@ export class ListComponent {
     persons = persons.filter(person => !person.classList.contains('unused'));
     persons.forEach(person => person.classList.remove('focus'));
     this.focusPerson.emit(null);
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
+    }
   }
 }

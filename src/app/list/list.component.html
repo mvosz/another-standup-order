@@ -1,6 +1,12 @@
-<div class="persons">
-  <div class="person" *ngFor="let name of names" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave($event)" (click)="setFocus($event)">
-    <div class="name">{{ name }}</div>
-    <div class="close" (click)="onClose(name)"></div>
+<div class="persons" [id]="'activeList'" cdkDropList #activeList="cdkDropList" [cdkDropListData]="names"
+     [cdkDropListConnectedTo]="'recentlyList'" (cdkDropListDropped)="drop($event)">
+  <div class="list">
+    <div cdkDrag *ngFor="let name of names">
+      <div class="person" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave($event)" (click)="setFocus($event)">
+        <div class="name">{{ name }}</div>
+        <div class="close" (click)="onClose(name)"></div>
+        <div class="drag-placeholder" *cdkDragPlaceholder><div class="name">{{ name }}</div></div>
+      </div>
+    </div>
   </div>
 </div>

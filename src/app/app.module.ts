@@ -10,6 +10,7 @@ import { CancelAllComponent } from './cancel-all/cancel-all.component';
 import { RecentlyUsedComponent } from './recently-used/recently-used.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ColorSchemeComponent } from './color-scheme/color-scheme.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { ColorSchemeComponent } from './color-scheme/color-scheme.component';
     RecentlyUsedComponent,
     ColorSchemeComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, DragDropModule],
   providers: [],
   bootstrap: [AppComponent]
 })
