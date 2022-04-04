@@ -4,14 +4,15 @@ import {
   EventEmitter,
   HostListener,
   Input,
-  Output
+  Output, ViewEncapsulation
 } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  styleUrls: ['./list.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ListComponent {
   @Input() names: string[] = [];
@@ -101,7 +102,6 @@ export class ListComponent {
   }
 
   drop(event: CdkDragDrop<string[]>) {
-    console.log('drop', event);
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {

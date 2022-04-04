@@ -6,8 +6,7 @@
   color: #dfdfdf;
 }
 
-.recently .person {
-  margin-bottom: 20px;
+.unused-person {
   color: white;
   background-color: #dfdfdf;
   border-radius: 5px;
@@ -16,7 +15,7 @@
   transition: all 200ms ease-in-out;
 }
 
-.recently .person:hover {
+.unused-person:hover {
   background-color: #a9a9a9;
   cursor: pointer;
 }
@@ -25,7 +24,7 @@
   margin-bottom: 5px;
 }
 
-.recently .name {
+.unused-person .name {
   font-family: sans-serif;
   font-size: 16px;
   padding: 20px;
@@ -33,7 +32,7 @@
   user-select: none;
 }
 
-.recently .close {
+.unused-person .close {
   width: 20px;
   height: 20px;
   padding: 20px;
@@ -42,12 +41,12 @@
   transition: opacity 300ms ease-in;
 }
 
-.recently .person.focus .close {
+.unused-person.focus .close {
   pointer-events: none;
   opacity: 0;
 }
 
-.recently .person:not(.focus) .close:hover {
+.unused-person:not(.focus) .close:hover {
   opacity: 1;
   cursor: pointer;
 }
@@ -68,10 +67,33 @@
   transform: translateY(-50%) rotate(-45deg);
 }
 
-.dark .recently .person {
+.dark .unused-person {
   background-color: #3f3f3f;
 }
 
-.dark .recently .person:hover {
+.dark .unused-person:hover {
   background-color: #4f4f4f;
+}
+
+.unused .drag-placeholder {
+  color: #dfdfdf;
+  background-color: transparent;
+  border: 3px dashed #dfdfdf;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.dark .unused .drag-placeholder {
+  color: #3f3f3f;
+  border: 3px dashed #3f3f3f;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recently {
+  padding-bottom: 20px;
 }
