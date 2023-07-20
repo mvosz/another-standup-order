@@ -75,6 +75,6 @@
 }
 
 .randomize__button:disabled {
-  filter: grayscale(0.5);
+  filter: saturate(0.5);
   pointer-events: none;
 }

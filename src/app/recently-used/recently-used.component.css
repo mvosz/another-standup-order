@@ -7,8 +7,11 @@
 }
 
 .unused-person {
-  color: white;
-  background-color: #dfdfdf;
+  color: #dfdfdf;
+  background-color: #fafafa;
+  border-color: #dfdfdf;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -68,7 +71,9 @@
 }
 
 .dark .unused-person {
+  color: #a3a3a3;
   background-color: #3f3f3f;
+  border-color: #3f3f3f;
 }
 
 .dark .unused-person:hover {

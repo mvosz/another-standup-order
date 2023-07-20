@@ -1,7 +1,7 @@
 <button
   class="randomize__button"
   type="button"
-  [disabled]="!names || names.length === 0"
+  [disabled]="!names || names.length <= 1"
   (click)="onRandomize()"
 >
   <div class="randomize__icon">
@@ -22,7 +22,5 @@
       />
     </svg>
   </div>
-  <div>
-  {{names.length}} {{names.length === 1 ? 'name' : 'names'}}
-  </div>
+  <div>{{ names.length }} {{ names.length === 1 ? 'name' : 'names' }}</div>
 </button>
