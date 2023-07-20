@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-randomize',
@@ -6,6 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./randomize.component.css']
 })
 export class RandomizeComponent {
+  @Input() names: string[] = [];
   @Output() randomize: EventEmitter<any> = new EventEmitter();
 
   onRandomize(): void {

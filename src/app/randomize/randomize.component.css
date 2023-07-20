@@ -28,6 +28,7 @@
   transition: all 300ms ease-in-out;
   position: relative;
   filter: saturate(0.8);
+  flex-direction: column;
 }
 
 .randomize__button:before,
@@ -71,4 +72,9 @@
 .randomize__icon svg {
   height: 30px;
   width: 30px;
+}
+
+.randomize__button:disabled {
+  filter: grayscale(0.5);
+  pointer-events: none;
 }

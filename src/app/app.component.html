@@ -2,7 +2,7 @@
   <div class="flex">
     <div class="flex-container">
 
-      <app-randomize (randomize)="onRandomize()"></app-randomize>
+      <app-randomize [names]="listNames" (randomize)="onRandomize()"></app-randomize>
 
       <app-add (addName)="onAdd($event, 'top')"></app-add>
 
