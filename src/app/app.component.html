@@ -1,20 +1,29 @@
 <div class="grid">
   <div class="flex">
     <div class="flex-container">
-
-      <app-randomize [names]="listNames" (randomize)="onRandomize()"></app-randomize>
+      <app-randomize
+        [names]="listNames"
+        (randomize)="onRandomize()"
+      ></app-randomize>
 
       <app-add (addName)="onAdd($event, 'top')"></app-add>
 
-      <app-list [names]="listNames" (removePerson)="onCancel($event)" (focusPerson)="setFocusPerson($event)"></app-list>
-
+      <app-list
+        [names]="listNames"
+        (removePerson)="onCancel($event)"
+        (focusPerson)="setFocusPerson($event)"
+        [onUnfocus]="unfocus.asObservable()"
+        [onFocusFirst]="focusFirst.asObservable()"
+      ></app-list>
     </div>
     <div class="flex-container">
-
       <app-cancel-all (cancelAll)="onCancelAll()"></app-cancel-all>
 
-      <app-recently-used [names]="recentlyNames" (addPerson)="onAdd($event, 'bottom')"
-        (removePerson)="onRemove($event)"></app-recently-used>
+      <app-recently-used
+        [names]="recentlyNames"
+        (addPerson)="onAdd($event, 'bottom')"
+        (removePerson)="onRemove($event)"
+      ></app-recently-used>
 
       <app-color-scheme></app-color-scheme>
     </div>
